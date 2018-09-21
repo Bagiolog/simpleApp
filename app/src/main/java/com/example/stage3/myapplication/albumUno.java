@@ -64,7 +64,7 @@ public class albumUno extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_album_uno2, container, false);
+        return inflater.inflate(R.layout.fragment_album_uno, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

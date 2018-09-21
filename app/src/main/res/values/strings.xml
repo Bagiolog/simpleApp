@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="eUsername">Username</string>
+    <string name="ePassword">Password</string>
+    <string name="bLogin">LOGIN</string>
+    <string name="username1">Carolina</string>
+    <string name="password1">1234</string>
+    <string name="benvenuto">Benvenuto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,12 +1,17 @@
 package com.example.stage3.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 
 /**
@@ -54,10 +59,13 @@ public class loginFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
+
     }
 
     @Override
@@ -65,6 +73,24 @@ public class loginFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false);
+    }
+
+    public void onViewCreated(View v, Bundle savedInstanceState) {
+        super.onViewCreated(v, savedInstanceState);
+        final EditText eUsername = (EditText) v.findViewById(R.id.eUsername);
+        final EditText ePassword = (EditText) v.findViewById(R.id.ePassword);
+        Button bLogin = (Button) v.findViewById(R.id.bLogin);
+
+        bLogin.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if((eUsername.getText().toString()).equals(getString(R.string.username1))&& (ePassword.getText().toString()).equals(getString(R.string.password1))){
+                    Intent intent = new Intent(getActivity(),home.class);
+                    startActivity(intent);
+                }
+            }
+
+        });
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
