@@ -23,7 +23,7 @@ import java.util.Arrays;
  * create an instance of this fragment.
  */
 public class albumUno extends Fragment {
-    String[] nomi={"Giacomo","Giorgio","Paolo","Luca","Adriano","Stefano","Diego","WeGuagliò","Kittemmuort","Maradona"};
+    String[] nomi={"foto1","foto2","foto3","foto4","foto5","foto6","foto7","foto8","foto9","foto10"};
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
