@@ -35,4 +35,8 @@ dependencies {
     compile 'com.github.ajalt.reprint:rxjava2:3.2.1@aar'
     // optional: the RxJava 2 interface
     implementation 'com.android.support:design:28.0.0-rc02'
+    //noinspection GradleCompatible
+    compile "com.android.support:recyclerview-v7:23.0.1"
+
+
 }

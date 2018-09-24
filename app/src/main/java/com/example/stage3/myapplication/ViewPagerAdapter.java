@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter  {
 
-    private String tabtitles[] = new String[] { "Tab1", "Tab2", "Tab3" };
+    private String tabtitles[] = new String[] { "Album 1", "Album 2", "Album 3" };
     Context context;
 
     public ViewPagerAdapter(FragmentManager fm) {
@@ -18,12 +18,11 @@ public class ViewPagerAdapter extends FragmentPagerAdapter  {
     @Override
     public Fragment getItem(int i) {
         switch (i) {
-            // Open FragmentTab1.java
             case 0:
                  return new albumUno();
             case 1:
                 return new albumDue();
-                // Open FragmentTab3.java
+
             case 2:
                 return new albumTre();
         }

@@ -9,7 +9,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/impostazioni"
+            android:text="impostazioni"
             android:id="@+id/impostazioni"/>
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"

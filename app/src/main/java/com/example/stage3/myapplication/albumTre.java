@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class albumTre extends Fragment {
+    String[] nomi={"tre","tre","tre","tre","tre","tre","tre","tre","tre","tre"};
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,7 +67,14 @@ public class albumTre extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_album_tre, container, false);
+        View v;
+        v = inflater.inflate(R.layout.fragment_album_tre,container,false);
+        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        RecyclerViewAdapter customAdapter = new RecyclerViewAdapter(nomi,getContext());
+        recyclerView.setAdapter(customAdapter);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
