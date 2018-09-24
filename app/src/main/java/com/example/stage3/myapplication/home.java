@@ -9,11 +9,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-public class home extends AppCompatActivity implements albumUno.OnFragmentInteractionListener , albumDue.OnFragmentInteractionListener, albumTre.OnFragmentInteractionListener {
+public class home extends AppCompatActivity implements albumUno.OnFragmentInteractionListener , albumDue.OnFragmentInteractionListener, albumTre.OnFragmentInteractionListener, impostazioni.OnFragmentInteractionListener {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -22,6 +23,13 @@ public class home extends AppCompatActivity implements albumUno.OnFragmentIntera
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         
+        final Button impostazioni=(Button)findViewById(R.id.impostazioni);
+        impostazioni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
