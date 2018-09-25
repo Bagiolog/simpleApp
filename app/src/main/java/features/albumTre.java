@@ -1,4 +1,4 @@
-package com.example.stage3.myapplication;
+package features;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,16 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.stage3.myapplication.R;
+import helpers.RecyclerViewAdapter;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link albumDue.OnFragmentInteractionListener} interface
+ * {@link albumTre.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link albumDue#newInstance} factory method to
+ * Use the {@link albumTre#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class albumDue extends Fragment {
+public class albumTre extends Fragment {
     String[] nomi={"foto1","foto2","foto3","foto4","foto5","foto6","foto7","foto8","foto9","foto10"};
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +35,7 @@ public class albumDue extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public albumDue() {
+    public albumTre() {
         // Required empty public constructor
     }
 
@@ -42,11 +45,11 @@ public class albumDue extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment albumDue.
+     * @return A new instance of fragment albumTre.
      */
     // TODO: Rename and change types and number of parameters
-    public static albumDue newInstance(String param1, String param2) {
-        albumDue fragment = new albumDue();
+    public static albumTre newInstance(String param1, String param2) {
+        albumTre fragment = new albumTre();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,7 +71,7 @@ public class albumDue extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v;
-        v = inflater.inflate(R.layout.fragment_album_due,container,false);
+        v = inflater.inflate(R.layout.fragment_album_tre,container,false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 

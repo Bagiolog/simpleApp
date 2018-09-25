@@ -1,17 +1,14 @@
-package com.example.stage3.myapplication;
+package activities;
 
-import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.StringRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+
+import com.example.stage3.myapplication.R;
+
+import features.loginFragment;
 
 public class loginActivity extends AppCompatActivity implements loginFragment.OnFragmentInteractionListener{
 
@@ -26,9 +23,6 @@ public class loginActivity extends AppCompatActivity implements loginFragment.On
         loginFragment fragment = new loginFragment();
         fragmentTransaction.add(R.id.frConteiner, fragment);
         fragmentTransaction.commit();
-
-
-
 
     }
 

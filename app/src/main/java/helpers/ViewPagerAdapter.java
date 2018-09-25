@@ -1,9 +1,13 @@
-package com.example.stage3.myapplication;
+package helpers;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import features.albumDue;
+import features.albumTre;
+import features.albumUno;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter  {
 

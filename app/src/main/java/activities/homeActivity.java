@@ -1,21 +1,19 @@
-package com.example.stage3.myapplication;
+package activities;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toolbar;
 
-import java.util.ArrayList;
+import com.example.stage3.myapplication.R;
+
+import features.albumDue;
+import features.albumTre;
+import features.albumUno;
+import helpers.ViewPagerAdapter;
 
 public class homeActivity extends AppCompatActivity implements albumUno.OnFragmentInteractionListener , albumDue.OnFragmentInteractionListener, albumTre.OnFragmentInteractionListener {
 

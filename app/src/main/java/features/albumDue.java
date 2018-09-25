@@ -1,4 +1,4 @@
-package com.example.stage3.myapplication;
+package features;
 
 import android.content.Context;
 import android.net.Uri;
@@ -10,19 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.example.stage3.myapplication.R;
+import helpers.RecyclerViewAdapter;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link albumUno.OnFragmentInteractionListener} interface
+ * {@link albumDue.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link albumUno#newInstance} factory method to
+ * Use the {@link albumDue#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class albumUno extends Fragment {
+public class albumDue extends Fragment {
     String[] nomi={"foto1","foto2","foto3","foto4","foto5","foto6","foto7","foto8","foto9","foto10"};
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +35,7 @@ public class albumUno extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public albumUno() {
+    public albumDue() {
         // Required empty public constructor
     }
 
@@ -45,11 +45,11 @@ public class albumUno extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment albumUno.
+     * @return A new instance of fragment albumDue.
      */
     // TODO: Rename and change types and number of parameters
-    public static albumUno newInstance(String param1, String param2) {
-        albumUno fragment = new albumUno();
+    public static albumDue newInstance(String param1, String param2) {
+        albumDue fragment = new albumDue();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,8 +69,9 @@ public class albumUno extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View v;
-        v = inflater.inflate(R.layout.fragment_album_uno,container,false);
+        v = inflater.inflate(R.layout.fragment_album_due,container,false);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
