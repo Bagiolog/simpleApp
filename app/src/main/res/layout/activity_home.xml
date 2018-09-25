@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".home">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="impostazioni"
-            android:id="@+id/impostazioni"/>
+    tools:context=".homeActivity">
+
+    <Button
+        android:id="@+id/impostazioni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="impostazioni" />
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/viewPager">
             <android.support.v4.view.PagerTabStrip
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
                 android:textColor="#000000" />
 
     </android.support.v4.view.ViewPager>

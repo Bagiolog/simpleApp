@@ -8,6 +8,9 @@
     <string name="benvenuto">Benvenuto</string>
     <string name="impostazioni">Impostazioni"</string>
     <string name="idRecyclerView">recyclerView</string>
+    <string name="logout">LOGOUT</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">settings</string>
 </resources>

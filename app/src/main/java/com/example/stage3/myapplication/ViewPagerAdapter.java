@@ -22,7 +22,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter  {
                  return new albumUno();
             case 1:
                 return new albumDue();
-
             case 2:
                 return new albumTre();
         }

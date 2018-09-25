@@ -4,14 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 
 
 /**
@@ -84,7 +82,7 @@ public class loginFragment extends Fragment {
         bLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if((eUsername.getText().toString()).equals(getString(R.string.username1))&& (ePassword.getText().toString()).equals(getString(R.string.password1))){
-                    Intent intent = new Intent(getActivity(),home.class);
+                    Intent intent = new Intent(getActivity(),homeActivity.class);
                     startActivity(intent);
                 }
             }

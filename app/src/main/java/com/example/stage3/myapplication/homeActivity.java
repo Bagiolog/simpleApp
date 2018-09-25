@@ -14,7 +14,7 @@ import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
-public class home extends AppCompatActivity implements albumUno.OnFragmentInteractionListener , albumDue.OnFragmentInteractionListener, albumTre.OnFragmentInteractionListener {
+public class homeActivity extends AppCompatActivity implements albumUno.OnFragmentInteractionListener , albumDue.OnFragmentInteractionListener, albumTre.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class home extends AppCompatActivity implements albumUno.OnFragmentIntera
         ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
-
+        Button impostazioni=(Button)findViewById(R.id.impostazioni);
     }
     @Override
     public void onFragmentInteraction(Uri uri) {
