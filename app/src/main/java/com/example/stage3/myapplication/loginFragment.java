@@ -2,8 +2,10 @@ package com.example.stage3.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,11 +81,27 @@ public class loginFragment extends Fragment {
         final EditText ePassword = (EditText) v.findViewById(R.id.ePassword);
         Button bLogin = (Button) v.findViewById(R.id.bLogin);
 
+
+        final String key="username";
+        final SharedPreferences preferences = getActivity().getSharedPreferences("login",Context.MODE_PRIVATE);
+        String username= preferences.getString("username",null);
+        Boolean controlloSwitch=preferences.getBoolean("controlloSwitch",false);
+
+        if(controlloSwitch){
+            eUsername.setText(username);
+        }
+
         bLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if((eUsername.getText().toString()).equals(getString(R.string.username1))&& (ePassword.getText().toString()).equals(getString(R.string.password1))){
-                    Intent intent = new Intent(getActivity(),homeActivity.class);
-                    startActivity(intent);
+                if((eUsername.getText().toString()).equals(getString(R.string.username1))&& (ePassword.getText().toString()).equals(getString(R.string.password1)))
+                   {
+                     String username=eUsername.getText().toString();
+                       SharedPreferences.Editor editor = preferences.edit();
+                       editor.putString(key,username);
+                       editor.apply();
+
+                     Intent intent = new Intent(getActivity(),homeActivity.class);
+                     startActivity(intent);
                 }
             }
 

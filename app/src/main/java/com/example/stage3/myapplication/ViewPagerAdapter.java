@@ -36,6 +36,4 @@ public class ViewPagerAdapter extends FragmentPagerAdapter  {
         return tabtitles[position];
     }
 
-
-
 }
