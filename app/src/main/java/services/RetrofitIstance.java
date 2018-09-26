@@ -3,11 +3,11 @@ package services;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class retrofitIstance {
+public class RetrofitIstance {
     private static Retrofit retrofit;
-    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/photos";
+    private static final String BASE_URL = "https://jsonplaceholder.typicode.com";
 
-    public static Retrofit getRetrofitIstance(){
+    public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()
                     .baseUrl(BASE_URL)
@@ -15,7 +15,5 @@ public class retrofitIstance {
                     .build();
         }
         return retrofit;
-
     }
-
 }

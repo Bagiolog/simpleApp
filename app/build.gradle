@@ -35,12 +35,21 @@ dependencies {
     compile 'com.github.ajalt.reprint:rxjava2:3.2.1@aar'
     // optional: the RxJava 2 interface
     implementation 'com.android.support:design:28.0.0-rc02'
+    //noinspection GradleDynamicVersion,GradleCompatible
+    compile "com.android.support:recyclerview-v7:26.1.0"
     //noinspection GradleCompatible
-    compile "com.android.support:recyclerview-v7:23.0.1"
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
 
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+
+
 
 
 }
