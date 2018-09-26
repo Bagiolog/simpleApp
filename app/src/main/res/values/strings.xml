@@ -6,10 +6,13 @@
     <string name="username1">Carolina</string>
     <string name="password1">1234</string>
     <string name="benvenuto">Benvenuto</string>
-    <string name="impostazioni">Impostazioni"</string>
+    <string name="impostazioni">Settings"</string>
     <string name="idRecyclerView">recyclerView</string>
     <string name="logout">LOGOUT</string>
     <string name="salvaDati">Salva i tuoi dati</string>
+    <string name="benvenuta">BENVENUTA</string>
+    <string name="escamativo">!</string>
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

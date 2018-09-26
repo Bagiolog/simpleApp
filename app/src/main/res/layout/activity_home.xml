@@ -11,16 +11,19 @@
         android:id="@+id/impostazioni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="impostazioni" />
+        android:text="@string/impostazioni" />
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/viewPager">
             <android.support.v4.view.PagerTabStrip
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000" />
+                android:id="@+id/pts"
+                android:layout_gravity="top"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
     </android.support.v4.view.ViewPager>
 

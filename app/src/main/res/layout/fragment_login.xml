@@ -7,6 +7,14 @@
     tools:context="features.loginFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/tUsername"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
         <EditText
             android:id="@+id/eUsername"
             android:layout_width="wrap_content"
