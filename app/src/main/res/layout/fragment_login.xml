@@ -9,36 +9,40 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
+        android:id="@+id/tUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:id="@+id/tUsername"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="20sp"/>
-        <EditText
-            android:id="@+id/eUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/eUsername"
-            android:layout_centerHorizontal="true"
-            android:inputType="textCapSentences" />
+        android:layout_marginTop="199dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
 
-        <EditText
-            android:id="@+id/ePassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/ePassword"
-            android:inputType="textPassword"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/eUsername" />
+    <EditText
+        android:id="@+id/eUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tUsername"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/eUsername"
+        android:inputType="textCapSentences" />
 
-        <Button
-            android:id="@+id/bLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bLogin"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/ePassword" />
+    <EditText
+        android:id="@+id/ePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eUsername"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/ePassword"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ePassword"
+        android:layout_centerHorizontal="true"
+        android:text="@string/bLogin" />
 
 
 

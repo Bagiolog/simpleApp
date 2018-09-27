@@ -3,6 +3,7 @@ package activities;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -38,10 +39,10 @@ public class homeActivity extends AppCompatActivity implements albumUno.OnFragme
                 Intent intent=new Intent(homeActivity.this,settingsActivity.class);
                 startActivity(intent);
 
-
             }
         });
     }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 

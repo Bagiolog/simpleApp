@@ -20,7 +20,7 @@ import entities.Photo;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private List<Photo> dataList;
-    private Context context;
+    Context context;
 
     public RecyclerViewAdapter(List<Photo> dataList,Context context){
         this.dataList=dataList;

@@ -11,7 +11,7 @@ import features.albumUno;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter  {
 
-    private String tabtitles[] = new String[] { "Album 1", "Album 2", "Album 3" };
+    private String tabtitles[] = new String[] { "ALBUM 1", "ALBUM 2", "ALBUM 3" };
     Context context;
 
     public ViewPagerAdapter(FragmentManager fm) {
