@@ -45,7 +45,6 @@ public class albumDue extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View v;
         v = inflater.inflate(R.layout.fragment_album_due,container,false);
         GetDataService service= RetrofitIstance.getRetrofitInstance().create(GetDataService.class);
@@ -72,8 +71,6 @@ public class albumDue extends Fragment {
     }
 
 
-
-
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -96,7 +93,6 @@ public class albumDue extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
 
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
