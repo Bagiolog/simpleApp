@@ -6,50 +6,66 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.stage3.myapplication.R;
+import com.squareup.picasso.OkHttpDownloader;
+import com.squareup.picasso.Picasso;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter {
-    String[] vettoreNomi;
-    Context context;
+import java.util.List;
 
-    public RecyclerViewAdapter(String[]nomi,Context context){
-        this.vettoreNomi=nomi;
+import entities.Photo;
+
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+    private List<Photo> dataList;
+    private Context context;
+
+    public RecyclerViewAdapter(List<Photo> dataList,Context context){
+        this.dataList=dataList;
         this.context=context;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowlayout, parent, false);
         // set the view's size, margins, paddings and layout parameters
-        MyViewHolder vh = new MyViewHolder(v); // pass the view to View Holder
+        ViewHolder vh = new ViewHolder(v); // pass the view to View Holder
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-        TextView nome=viewHolder.itemView.findViewById(R.id.tNome);
-        nome.setText(vettoreNomi[i]);
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        viewHolder.txtTitle.setText(dataList.get(i).getTitle());
+
+        Picasso.Builder builder =new Picasso.Builder(context);
+        builder.downloader(new OkHttpDownloader(context));
+        builder.build().load(dataList.get(i).getThumbanailUrl())
+                .placeholder((R.drawable.ic_launcher_background))
+                .error(R.drawable.ic_launcher_background)
+                .into(viewHolder.coverImage);
     }
 
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
+        public final View mView;
+        TextView txtTitle;
+        private ImageView coverImage;
 
-    @Override
-    public int getItemCount() {
-        return vettoreNomi.length;
-    }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView nome;
-        public MyViewHolder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
-            nome = (TextView) itemView.findViewById(R.id.tNome);
+            mView=itemView;
+
+            txtTitle=mView.findViewById(R.id.title);
+            coverImage=mView.findViewById(R.id.photo);
         }
     }
 
-
+    @Override
+    public int getItemCount() {
+        return dataList.size();
+    }
 
 }
