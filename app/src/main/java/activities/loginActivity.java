@@ -1,9 +1,13 @@
 package activities;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -13,7 +17,7 @@ import com.example.stage3.myapplication.R;
 import features.loginFragment;
 
 public class loginActivity extends AppCompatActivity implements loginFragment.OnFragmentInteractionListener{
-    //private long backPressedTime;
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +32,12 @@ public class loginActivity extends AppCompatActivity implements loginFragment.On
         fragmentTransaction.commit();
 
     }
-  /*  public void onBackPressed() {
 
-        if(backPressedTime+2000 > System.currentTimeMillis()){
-            super.onBackPressed();
-            return;
-        }
-        else{
-            Toast.makeText(getBaseContext(),"Press back again to exit", Toast.LENGTH_SHORT).show();
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    public void onBackPressed() {
+        this.finishAffinity();
+    }
 
-        }
-        backPressedTime=System.currentTimeMillis();
-    }*/
     @Override
     public void onFragmentInteraction(Uri uri) {
 
