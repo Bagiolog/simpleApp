@@ -97,7 +97,6 @@ public class albumUno extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-
         void onFragmentInteraction(Uri uri);
     }
 }
