@@ -4,14 +4,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.VibrationEffect;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.example.stage3.myapplication.R;
 
@@ -27,11 +30,16 @@ public class homeActivity extends AppCompatActivity implements albumUno.OnFragme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
-        PagerTabStrip pagerTabStrip=(PagerTabStrip)findViewById(R.id.pts);
-        pagerTabStrip.setDrawFullUnderline(true);
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        RelativeLayout sfondo=(RelativeLayout)findViewById(R.id.sfondoHome);
+        sfondo.setBackgroundColor(Color.rgb(135,206,250));
 
+
+        ViewPager viewPager=(ViewPager)findViewById(R.id.ViewPager);
+        //TabLayout tabLayout=(TabLayout)findViewById(R.id.tabLayout);
+        //PagerTabStrip pagerTabStrip=(PagerTabStrip)findViewById(R.id.pts);
+        //pagerTabStrip.setDrawFullUnderline(true);
+        //tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
 
         Button impostazioni=(Button)findViewById(R.id.impostazioni);

@@ -31,9 +31,7 @@ public class albumUno extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public albumUno() {
-
-    }
+    public albumUno() { }
 
     public static albumUno newInstance() {
         return new albumUno();

@@ -18,7 +18,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter  {
         super(fm);
     }
 
-    final int nPagine=3;
     @Override
     public Fragment getItem(int i) {
         switch (i) {
@@ -34,7 +33,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter  {
 
     @Override
     public int getCount() {
-        return nPagine;
+        return 3;
     }
     public CharSequence getPageTitle(int position) {
         return tabtitles[position];

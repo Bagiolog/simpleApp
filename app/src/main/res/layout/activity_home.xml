@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="activities.homeActivity">
+    tools:context="activities.homeActivity"
+    android:id="@+id/sfondoHome">
 
     <Button
         android:id="@+id/impostazioni"
@@ -16,19 +17,34 @@
         android:text="@string/impostazioni"
         android:layout_alignParentRight="true" />
 
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewPager"
-        android:layout_below="@+id/impostazioni">
-            <android.support.v4.view.PagerTabStrip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pts"
-                android:layout_gravity="top"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp" />
-    </android.support.v4.view.ViewPager>
+ <!--     <android.support.design.widget.TabLayout
+          android:id="@+id/tabLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:tabMode="fixed"
+          android:layout_below="@+id/impostazioni" />
+
+      <android.support.v4.view.ViewPager
+          android:id="@+id/ViewPager"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:background="@android:color/white" />-->
+
+      <android.support.v4.view.ViewPager
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ViewPager"
+          android:layout_below="@+id/impostazioni">
+
+
+              <android.support.v4.view.PagerTabStrip
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/pts"
+                  android:layout_gravity="top"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp" />
+      </android.support.v4.view.ViewPager>
 
 
 </RelativeLayout>

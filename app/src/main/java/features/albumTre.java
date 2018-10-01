@@ -29,13 +29,9 @@ public class albumTre extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public albumTre() {
-        // Required empty public constructor
-    }
+    public albumTre() { }
 
-
-
-    public static albumTre newInstance(String param1, String param2) {
+    public static albumTre newInstance() {
         return new albumTre();
     }
 
@@ -74,8 +70,6 @@ public class albumTre extends Fragment {
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
-
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -100,7 +94,6 @@ public class albumTre extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

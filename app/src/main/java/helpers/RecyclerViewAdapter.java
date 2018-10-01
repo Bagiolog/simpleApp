@@ -1,5 +1,6 @@
 package helpers;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -19,7 +20,7 @@ import entities.Photo;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private List<Photo> dataList;
-    Context context;
+    private Context context;
 
     public RecyclerViewAdapter(List<Photo> dataList,Context context){
         this.dataList=dataList;
@@ -30,35 +31,34 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.photo_row_layout, parent, false);
-        // set the view's size, margins, paddings and layout parameters
-        ViewHolder vh = new ViewHolder(v); // pass the view to View Holder
+        ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.txtTitle.setText(dataList.get(i).getTitle());
-
-        Picasso.Builder builder =new Picasso.Builder(context);
+        viewHolder.txtTitle.setText(" "+dataList.get(i).getTitle()+"\n");
+        //imageView
+        /*Picasso.Builder builder =new Picasso.Builder(context);
         builder.downloader(new OkHttpDownloader(context));
         builder.build().load(dataList.get(i).getThumbanailUrl())
                 .placeholder((R.drawable.ic_launcher_background))
                 .error(R.drawable.ic_launcher_background)
-                .into(viewHolder.coverImage);
+                .into(viewHolder.coverImage);*/
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public final View mView;
         TextView txtTitle;
-        private ImageView coverImage;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
             mView=itemView;
 
             txtTitle=mView.findViewById(R.id.title);
-            coverImage=mView.findViewById(R.id.photo);
         }
     }
 

@@ -29,11 +29,9 @@ public class albumDue extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public albumDue() {
-        // Required empty public constructor
-    }
+    public albumDue() { }
 
-    public static albumDue newInstance(String param1, String param2) {
+    public static albumDue newInstance() {
         return  new albumDue();
     }
 

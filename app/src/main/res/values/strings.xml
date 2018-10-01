@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Galleria</string>
+    <string name="app_name">Photos</string>
     <string name="eUsername">Username</string>
     <string name="ePassword">Password</string>
     <string name="bLogin">LOGIN</string>

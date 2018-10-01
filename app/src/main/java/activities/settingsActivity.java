@@ -3,11 +3,13 @@ package activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 
 import com.example.stage3.myapplication.R;
@@ -18,6 +20,8 @@ public class settingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        RelativeLayout settingSfondo=(RelativeLayout)findViewById(R.id.sfondoSettings);
+        settingSfondo.setBackgroundColor(Color.rgb(135,206,250));
         Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
 
         final SharedPreferences preferences =getSharedPreferences("login", Context.MODE_PRIVATE);
