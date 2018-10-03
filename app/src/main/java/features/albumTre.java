@@ -1,9 +1,11 @@
 package features;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -56,7 +58,13 @@ public class albumTre extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
+                new AlertDialog.Builder(getContext())
+                        .setTitle("Errore")
+                        .setMessage("Il caricamento dei dati non ha avuto successo")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface arg0, int arg1) { }
+                        }).create().show();
             }
         });
 
