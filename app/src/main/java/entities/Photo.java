@@ -21,7 +21,6 @@ public class Photo {
     public int getIdAlbum(){
         return idAlbum;
     }
-
     public void setid(int id){
         this.id=id;
     }

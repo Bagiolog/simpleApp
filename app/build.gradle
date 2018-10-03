@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.stage3.myapplication"
@@ -45,12 +49,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 
     compile 'com.squareup.okhttp:okhttp:2.4.0'
-
-
-
-
-
-
 
 
 }

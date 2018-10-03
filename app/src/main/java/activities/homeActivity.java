@@ -33,14 +33,10 @@ public class homeActivity extends AppCompatActivity implements albumUno.OnFragme
         RelativeLayout sfondo=(RelativeLayout)findViewById(R.id.sfondoHome);
         sfondo.setBackgroundColor(Color.rgb(135,206,250));
 
-
-        ViewPager viewPager=(ViewPager)findViewById(R.id.ViewPager);
-        //TabLayout tabLayout=(TabLayout)findViewById(R.id.tabLayout);
-        //PagerTabStrip pagerTabStrip=(PagerTabStrip)findViewById(R.id.pts);
-        //pagerTabStrip.setDrawFullUnderline(true);
-        //tabLayout.setupWithViewPager(viewPager);
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-
+        ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
+        PagerTabStrip pagerTabStrip=(PagerTabStrip)findViewById(R.id.pts);
+        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
 
         Button impostazioni=(Button)findViewById(R.id.impostazioni);
         impostazioni.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +62,6 @@ public class homeActivity extends AppCompatActivity implements albumUno.OnFragme
                     }
                 }).create().show();
     }
-
 
     @Override
     public void onFragmentInteraction(Uri uri) {

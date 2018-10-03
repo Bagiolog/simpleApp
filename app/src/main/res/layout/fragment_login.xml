@@ -6,8 +6,6 @@
     android:layout_centerVertical="true"
     tools:context="features.loginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:id="@+id/tUsername"
         android:layout_width="wrap_content"
@@ -48,5 +46,14 @@
         android:text="@string/bLogin"
         android:layout_marginRight="0dp"
         android:layout_alignRight="@+id/eUsername" />
+
+    <Button
+        android:id="@+id/bfingerPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="114dp"
+        android:text="@string/fingerprint" />
 
 </RelativeLayout>

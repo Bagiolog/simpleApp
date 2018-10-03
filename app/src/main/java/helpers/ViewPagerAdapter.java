@@ -4,15 +4,17 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
+
+import java.util.List;
 
 import features.albumDue;
 import features.albumTre;
 import features.albumUno;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter  {
+public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
-    private String tabtitles[] = new String[] { "ALBUM 1", "ALBUM 2", "ALBUM 3" };
-    Context context;
+   private String[]tabtitles={"ALBUM 1","ALBUM 2","ALBUM 3"};
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);

@@ -1,9 +1,12 @@
 package features;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +19,8 @@ import com.example.stage3.myapplication.R;
 
 import java.util.List;
 
+import activities.homeActivity;
+import activities.loginActivity;
 import entities.Photo;
 import helpers.RecyclerViewAdapter;
 import retrofit2.Call;
@@ -58,7 +63,13 @@ public class albumUno extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
+                new AlertDialog.Builder(getContext())
+                        .setTitle("Errore")
+                        .setMessage("Il caricamento dei dati non ha avuto successo")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                            public void onClick(DialogInterface arg0, int arg1) { }
+                        }).create().show();
             }
         });
         return v;
