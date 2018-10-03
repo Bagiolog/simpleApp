@@ -13,11 +13,11 @@ import features.albumTre;
 import features.albumUno;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+    int numOfPage;
 
-   private String[]tabtitles={"ALBUM 1","ALBUM 2","ALBUM 3"};
-
-    public ViewPagerAdapter(FragmentManager fm) {
+    public ViewPagerAdapter(FragmentManager fm,int numOfPage) {
         super(fm);
+        this.numOfPage=numOfPage;
     }
 
     @Override
@@ -35,10 +35,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
-    }
-    public CharSequence getPageTitle(int position) {
-        return tabtitles[position];
+        return numOfPage;
     }
 
 }

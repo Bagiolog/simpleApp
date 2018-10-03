@@ -150,19 +150,19 @@ public class loginFragment extends Fragment {
                             Toast.LENGTH_LONG).show();
                 }
 
-
+                //AUTHENTICATE
                 Reprint.authenticate(new AuthenticationListener() {
                     public void onSuccess(int moduleTag) {
-                        Toast.makeText(getContext(),"SUCCESS fingerprint",
+                        Toast.makeText(getActivity(),"OnSUCCESS fingerprint",
                                 Toast.LENGTH_LONG).show();
 
-                        Intent intent = new Intent(getActivity(), homeActivity.class);
-                        startActivity(intent);
+                        /*Intent intent = new Intent(getActivity(), homeActivity.class);
+                        startActivity(intent);*/
                     }
 
                     public void onFailure(AuthenticationFailureReason failureReason, boolean fatal,
                                           CharSequence errorMessage, int moduleTag, int errorCode) {
-                        Toast.makeText(getActivity(),"FAILURE fingerprint",
+                        Toast.makeText(getActivity(),"OnFAILURE fingerprint",
                                 Toast.LENGTH_LONG).show();
                     }
                 });

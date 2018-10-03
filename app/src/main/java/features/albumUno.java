@@ -38,10 +38,7 @@ public class albumUno extends Fragment {
 
     public albumUno() { }
 
-    public static albumUno newInstance() {
-        return new albumUno();
-
-    }
+    public static albumUno newInstance() { return new albumUno(); }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,13 +60,6 @@ public class albumUno extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
-                new AlertDialog.Builder(getContext())
-                        .setTitle("Errore")
-                        .setMessage("Il caricamento dei dati non ha avuto successo")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface arg0, int arg1) { }
-                        }).create().show();
             }
         });
         return v;

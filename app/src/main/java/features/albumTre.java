@@ -28,7 +28,6 @@ public class albumTre extends Fragment {
     private RecyclerViewAdapter recyclerViewAdapter;
     private RecyclerView recyclerView;
 
-
     private OnFragmentInteractionListener mListener;
 
     public albumTre() { }
@@ -45,7 +44,6 @@ public class albumTre extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View v;
         v = inflater.inflate(R.layout.fragment_album_tre,container,false);
         GetDataService service= RetrofitIstance.getRetrofitInstance().create(GetDataService.class);
@@ -58,16 +56,8 @@ public class albumTre extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
-                new AlertDialog.Builder(getContext())
-                        .setTitle("Errore")
-                        .setMessage("Il caricamento dei dati non ha avuto successo")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface arg0, int arg1) { }
-                        }).create().show();
             }
         });
-
         return v;
     }
 

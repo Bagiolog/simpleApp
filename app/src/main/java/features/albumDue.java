@@ -28,13 +28,12 @@ public class albumDue extends Fragment {
     private RecyclerViewAdapter recyclerViewAdapter;
     private RecyclerView recyclerView;
 
-
     private OnFragmentInteractionListener mListener;
 
     public albumDue() { }
 
     public static albumDue newInstance() {
-        return  new albumDue();
+        return new albumDue();
     }
 
     @Override
@@ -57,13 +56,6 @@ public class albumDue extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Photo>> call, Throwable t) {
-                new AlertDialog.Builder(getContext())
-                        .setTitle("Errore")
-                        .setMessage("Il caricamento dei dati non ha avuto successo")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                            public void onClick(DialogInterface arg0, int arg1) { }
-                        }).create().show();
             }
         });
         return v;

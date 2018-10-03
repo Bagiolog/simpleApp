@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/eUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tUsername"
         android:layout_centerHorizontal="true"
@@ -28,7 +28,7 @@
 
     <EditText
         android:id="@+id/ePassword"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/eUsername"
         android:layout_centerHorizontal="true"
@@ -37,15 +37,15 @@
 
     <Button
         android:id="@+id/bLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ePassword"
         android:layout_alignEnd="@+id/eUsername"
+        android:layout_alignRight="@+id/eUsername"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="0dp"
-        android:text="@string/bLogin"
         android:layout_marginRight="0dp"
-        android:layout_alignRight="@+id/eUsername" />
+        android:text="@string/bLogin" />
 
     <Button
         android:id="@+id/bfingerPrint"

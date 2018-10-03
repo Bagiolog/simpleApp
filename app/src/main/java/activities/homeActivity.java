@@ -15,6 +15,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.ToggleButton;
 
 import com.example.stage3.myapplication.R;
 
@@ -33,10 +34,26 @@ public class homeActivity extends AppCompatActivity implements albumUno.OnFragme
         RelativeLayout sfondo=(RelativeLayout)findViewById(R.id.sfondoHome);
         sfondo.setBackgroundColor(Color.rgb(135,206,250));
 
-        ViewPager viewPager=(ViewPager)findViewById(R.id.viewPager);
-        PagerTabStrip pagerTabStrip=(PagerTabStrip)findViewById(R.id.pts);
-        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        final ViewPager viewPager=(ViewPager)findViewById(R.id.vp);
+        TabLayout tabLayout=(TabLayout) findViewById(R.id.tl);
+        tabLayout.addTab(tabLayout.newTab().setText("ALBUM 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("ALBUM 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("ALBUM 3"));
+        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) { }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) { }
+        });
+
 
         Button impostazioni=(Button)findViewById(R.id.impostazioni);
         impostazioni.setOnClickListener(new View.OnClickListener() {

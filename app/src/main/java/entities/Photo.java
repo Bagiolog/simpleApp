@@ -13,7 +13,7 @@ public class Photo {
          this.title=title;
          this.url=url;
          this.thumbnailUrl=thumbnailUrl;
-     }
+    }
 
     public void setIdAlbum(int IdAlbum){
         this.idAlbum=idAlbum;
@@ -43,6 +43,4 @@ public class Photo {
     public String getThumbanailUrl(){
         return thumbnailUrl;
     }
-
-
 }
